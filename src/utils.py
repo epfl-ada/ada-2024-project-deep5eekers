@@ -76,6 +76,7 @@ def load_df_characters(path):
         'freebase_character_id',
         'freebase_actor_id'
     ]
+    df_characters['release_date'] = pd.to_datetime(df_characters['release_date'], errors='coerce')
     return df_characters
 
 
