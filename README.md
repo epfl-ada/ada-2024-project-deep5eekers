@@ -16,20 +16,24 @@ In this section we have listed the main research questions we would like to addr
 
 - What are the stereotypical character types across gender? How are these characters portrayed? Have these stereotypes changed with time? 
 
-- In general, are there different adjectives, actions, and personas that are given to men versus women characters? Are the words used in either case seen as positive or negative?
+- In general, are there different adjectives, actions, and personas that are given to men versus women characters? Are the words used in either case seen as positive or negative? Can we assess the sentiment around different gendered roles?
 
-## Supplementary Datasets
+## Supplementary Data
 
+In addition to the CMU dataset, we are using the Wikipedia pages that exist for a subset of the CMU dataset movies. With these Wikipedia pages, we will access the plot summaries and the movie's director. The plot summaries will be used to potentially supplement the smaller summaries in the CMU dataset. For our analysis, the plot summaries are being used extract information and sentiment about the different characters. We are accessing the directors because we want to study the gender imbalances in movie production jobs. We will study how this imbalance has changed with time. 
 
 ## Methods
 
 
+
 ## Project Timeline
 
+## Team Milestones for 
 
 ---
 
 ### Deep5eekers Team
+
 - Simon Anton
 - Kyuhee Kim
 - Christina Kopidaki
