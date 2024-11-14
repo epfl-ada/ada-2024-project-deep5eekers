@@ -31,12 +31,11 @@ class EventDataset(CharacterDataset):
         self.poss_events = defaultdict(list)
         self._build()
 
-    def _preprocess_verbs(self, verbs):
+    def _preprocess(self, verbs):
         """
-        Preprocesses a list of verbs by converting to lowercase, lemmatizing, and counting frequencies.
+        Preprocesses a list of verbs by converting to lowercase and lemmatizing.
         """
-        verbs = [self.lemmatizer.lemmatize(verb.lower(), wordnet.VERB) for verb in verbs]
-        return Counter(verbs)
+        return [self.lemmatizer.lemmatize(verb.lower(), wordnet.VERB) for verb in verbs]
 
     def _build(self):
         """
@@ -45,12 +44,6 @@ class EventDataset(CharacterDataset):
         """
         # Collect verbs by gender
         for ch in self.characters:
-            self.agent_events[ch.gender].extend(ch.agent_word)
-            self.patient_events[ch.gender].extend(ch.patient_word)
-            self.poss_events[ch.gender].extend(ch.poss_word)
-
-        # Process verbs for each gender category
-        for gender in GENDER_DICT.values():
-            self.agent_events[gender] = self._preprocess_verbs(self.agent_events[gender])
-            self.patient_events[gender] = self._preprocess_verbs(self.patient_events[gender])
-            self.poss_events[gender] = self._preprocess_verbs(self.poss_events[gender])
+            self.agent_events[ch.gender].extend(self._preprocess(ch.agent_word))
+            self.patient_events[ch.gender].extend(self._preprocess(ch.patient_word))
+            self.poss_events[ch.gender].extend(self._preprocess(ch.poss_word))
