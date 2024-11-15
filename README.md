@@ -26,7 +26,8 @@ We are also planning on using data from IMBD. We will access movies' scores and 
 
 ## Methods
 ### Plot Analysis
-![Plot Analysis Pipeline](plot_pipeline.png) 
+![Plot Analysis Pipeline](plot_pipeline.png)
+
 For our plot analysis, we used the Book NLP library to perform Named Entity Recognition (NER), coreference resolution, and dependency parsing. Book NLP, specifically designed for literary texts, was chosen as it is well-suited for analyzing narrative structures like plots. We identified characters' genders through pronoun-based Gender Recognition and examined words associated with each character using dependency parsing.
 
 Our analysis included:
