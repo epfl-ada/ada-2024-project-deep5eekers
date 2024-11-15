@@ -28,7 +28,8 @@ We are also planning on using data from IMBD. We will access movies' scores and 
 
 - ML: Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
 
-- Sentiment Analysis: 
+- Plot Analysis:
+![Plot Analysis Pipeline](plot_pipeline.png) 
 
 - Clustering of genre success (revenue) by gender
 
