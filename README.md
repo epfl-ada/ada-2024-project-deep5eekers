@@ -59,12 +59,13 @@ Expanding beyond basic word associations, we extracted events involving agent an
 ## Project Timeline
 
 
-### Week 1: Finalize datasets
+### Week 1: Finalize P2 achievements
 - Merge CMU, IMDb and Oscar data (Enrich collected data with Gender data for Actors, Directors, etc. using Wikipedia)
 - More work on RQ1, RQ2, additional hypothesis testing
-### Week 2: ???
-- Work on RQ5, ???  
-- In depth work on RQ3, ???
+- In depth work on RQ3
+### Week 2: Homework  
+- Start working on RQ5
+- ADA Homework 2 =) 
 ### Week 3: Oscar and Revenue
 - Work on RQ4, evaluating box office and gender associations
 - Analyze Oscar data, enhance analysis of the (RQ5) with more production roles from the Oscar data. 
