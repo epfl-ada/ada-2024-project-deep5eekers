@@ -10,15 +10,11 @@ We were inspired to choose this topic because gender representation in film prov
 
 In this section we have listed the main research questions we would like to address during this project. 
 
-- What are the gender imbalances in acting and production roles? And how have these imbalances changed over time?
-
-- What are the stereotypical character types across gender? How are these characters portrayed? Have these stereotypes changed with time? 
-
-- In general, are there different adjectives, actions, and personas that are given to men versus women characters? Are the words used in either case seen as positive or negative? Can we assess the sentiment around different gendered roles?
-
-- Is genders' imbalanced representation in movies corrrelated with succesful or unsuccesful films?
-
-- Does the gender of the director affect the representation of males or females in movies?
+- What gender imbalances exist in acting roles, and how do these differences vary over time, across genres, and between countries?
+- What stereotypical character types are associated with each gender?
+- In plotlines, are male and female characters typically assigned different actions and portrayals? Do the words used in each case convey positive or negative connotations?
+- Is unequal gender representation in films linked to a movie’s success or failure?
+- Does gender inequality exist in production roles as well? Does a director's gender influence the portrayal of male and female characters in films?
 
 In addition to these main questions, we may choose to explore other sub-questions. As we have gone through the dataset in our initial analysis, we have stumbled upon other interesting gender-related topics. For example, we may look into how movie ratings differ for movies with female leads versus male leads. 
 
