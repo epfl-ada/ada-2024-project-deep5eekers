@@ -2,4 +2,3 @@ MovieSummaries/
 src/__pycache__/
 *.csv
 *.zip
-data
