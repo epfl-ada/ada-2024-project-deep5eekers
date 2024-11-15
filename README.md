@@ -10,11 +10,11 @@ We were inspired to choose this topic because gender representation in film prov
 
 In this section we have listed the main research questions we would like to address during this project. 
 
-- What gender imbalances exist in acting roles, and how do these differences vary over time, across genres, and between countries?
-- What stereotypical character types are associated with each gender?
-- In plotlines, are male and female characters typically assigned different actions and portrayals? Do the words used in each case convey positive or negative connotations?
-- Is unequal gender representation in films linked to a movie’s success or failure?
-- Does gender inequality exist in production roles as well? Does a director's gender influence the portrayal of male and female characters in films?
+- RQ1: What gender imbalances exist in acting roles, and how do these differences vary over time, across genres, and between countries?
+- RQ2: What stereotypical character types are associated with each gender?
+- RQ3: In plot lines, are male and female characters typically assigned different actions and portrayals? Do the words used in each case convey positive or negative connotations?
+- RQ4: Is unequal gender representation in films linked to a movie’s success or failure?
+- RQ5: Does gender inequality exist in production roles as well? Does a director's gender influence the portrayal of male and female characters in films?
 
 In addition to these main questions, we may choose to explore other sub-questions. As we have gone through the dataset in our initial analysis, we have stumbled upon other interesting gender-related topics. For example, we may look into how movie ratings differ for movies with female leads versus male leads. 
 
@@ -28,17 +28,18 @@ In addition to these main questions, we may choose to explore other sub-question
 
 ## Methods
 
-### Part 1: Getting familiar with the data.
+### Part 1: Exploring and Expanding the Data (Done in P2)
 The first step to starting off our analysis, was getting to know the data and the information we could gather based on that. 
 
-*Step 1:* We wrote utility functions in order to load the datasets in convenient formats.
+- We wrote utility functions in order to load the datasets in convenient formats.
+- Preliminary analysis was conducted to visualize the representation of male and female characters, across countries, years and genres. (RQ1) 
+- We have used the clustering provided by the CMU datasets. Analysis of frequency of different personality traits by gender was performed. (RQ2)
+- We have enriched our data with additional datasets, scrapping information from wikipedia, getting familiar with IMDb and Oscar datasets. Those datasets are merged using Wikipedia to IMDb id mapping. We still have to enrich the data, as currently no gender labels for production roles and Oscar dataset are present.  
 
-*Step 2:* Preliminary analysis was conducted to visualize the representation of male and female characters, across countries, years and grenres.
-
-### Part 2: Plot Analysis
+### Part 2: Plot Analysis (Done in P2)
 ![Plot Analysis Pipeline](plot_pipeline.png)
 
-To address our third research question, we conducted a plot analysis using [the Book NLP library](https://github.com/booknlp/booknlp), performing Named Entity Recognition (NER), coreference resolution, and dependency parsing. Designed specifically for literary texts, Book NLP was chosen for its effectiveness in analyzing narrative structures. We identified characters' genders through pronoun-based Gender Recognition and analyzed words associated with each character using dependency parsing.
+To address our RQ3, we conducted a plot analysis using [the Book NLP library](https://github.com/booknlp/booknlp), performing Named Entity Recognition (NER), coreference resolution, and dependency parsing. Designed specifically for literary texts, Book NLP was chosen for its effectiveness in analyzing narrative structures. We identified characters' genders through pronoun-based Gender Recognition and analyzed words associated with each character using dependency parsing.
 
 Our analysis included:
 
@@ -48,27 +49,37 @@ Our analysis included:
 Expanding beyond basic word associations, we extracted events involving agent and patient roles and will use [the COMET model along with the Kogito library](https://github.com/epfl-nlp/kogito) to infer likely character attributes (xAttribute) and emotions (xReact, oReact) based on these events (TBD). This approach will allow us to explore variations in personas and emotional responses across genders.
 
 
+### Part 3: In-depth analysis (Plans for P3)
 
-
-### ML
-Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
-
-### Clustering of genre success (revenue) by gender
-
-Task: That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook.
+- (RQ1) and (RQ2) require more statistical analysis. While initial visualization was performed, we have to be mathematically precise here. 
+- (RQ3) Plot Analysis was researched to significant extent. However, we still need perform the analysis on the scale as well as test additional hypothesis (adjective analysis, enriching summaries with wikipedia information).
+- (RQ5) We have gathered additional data for the production roles analysis. We will calculate the proportion of male vs. female representation across different roles. As well as correlation of characters genders and directors of the movie. Analyze how this representation has changed over the past years. We are also interested whether gender of the director affects gender stereotypes and complexity of the roles (for example, whether female director provide more complex roles for women characters).     
+- (RQ4) Analyze if films with female leads perform differently in terms of revenue compared to male-led films. How this affects IMDb rating? How this affects the Oscar award?  
 
 ## Project Timeline
 
 
-## Team Milestones
+### Week 1: Finalize datasets
+- Merge CMU, IMDb and Oscar data (Enrich collected data with Gender data for Actors, Directors, etc. using Wikipedia)
+- More work on RQ1, RQ2, additional hypothesis testing
+### Week 2: ???
+- Work on RQ5, ???  
+- In depth work on RQ3, ???
+### Week 3: Oscar and Revenue
+- Work on RQ4, evaluating box office and gender associations
+- Analyze Oscar data, enhance analysis of the (RQ5) with more production roles from the Oscar data. 
+### Week 4: Data Visualization
+- Start working on the website
+- Work on detailed/rich visualizations (matplotlib plots --> JS plots)
+### Week 5: Final Presentation
+- Write a story, project presentation
+- Clean up visualization
 
-
----
 
 ### Deep5eekers Team
 
-- Simon Anton
-- Kyuhee Kim
-- Christina Kopidaki
-- Margarita Mikhelson
-- Ivan Pavlov
+- Simon Anton (WebDevelopment expert)
+- Kyuhee Kim (Plot Analysis expert, RQ3)
+- Christina Kopidaki (Visualization expert, RQ1, RQ2)
+- Margarita Mikhelson (Statistician, Hypothesis testing)
+- Ivan Pavlov (Data Engineer, Enriching the data)
