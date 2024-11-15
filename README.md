@@ -25,11 +25,19 @@ In addition to the CMU dataset, we are using the Wikipedia pages that exist for 
 We are also planning on using data from IMBD. We will access movies' scores and the directors. We want this data for two main reasons: to study the relationship between a lead role's gender and the respective movie's IMBD rating and to study the potential gender imbalances in movie production jobs. We will study how both of these have changed with time. To access this data, we plan to use the IMBD id which is commonly found in the Wikipedia pages. Since IMBD's API has licensing restrictions, it is not so straightforward to access the data. Instead we are going to use IMBD's provided non-commercial datasets.  
 
 ## Methods
+![Plot Analysis Pipeline](plot_pipeline.png) 
+- Plot Analysis:
+For our plot analysis, we used the Book NLP library to perform Named Entity Recognition (NER), coreference resolution, and dependency parsing. Book NLP, specifically designed for literary texts, was chosen as it is well-suited for analyzing narrative structures like plots. We identified characters' genders through pronoun-based Gender Recognition and examined words associated with each character using dependency parsing.
+
+Our analysis included:
+1) Counting the number and mention frequency of female and male characters in the plot ("Mention Count by Gender"), and 
+2) Examining words associated with each gender in different roles, such as possessive words, agent words, patient words, and modifiers ("Word Cloud by Gender").
+
+Moving beyond simple word associations, we extracted events related to agent and patient words, using the COMET model to infer potential character attributes (xAttribute) and emotions (xReact, oReact) based on these events. This allowed us to analyze variations in personas and emotional responses across genders.
 
 - ML: Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
 
-- Plot Analysis:
-![Plot Analysis Pipeline](plot_pipeline.png) 
+
 
 - Clustering of genre success (revenue) by gender
 
