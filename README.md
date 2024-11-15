@@ -35,18 +35,19 @@ The first step to starting off our analysis, was getting to know the data and th
 
 *Step 2:* Preliminary analysis was conducted to visualize the representation of male and female characters, across countries, years and grenres.
 
-### Plot Analysis
-
+### Part 2: Plot Analysis
 ![Plot Analysis Pipeline](plot_pipeline.png)
 
-For our plot analysis, we used [the Book NLP library](https://github.com/booknlp/booknlp) to perform Named Entity Recognition (NER), coreference resolution, and dependency parsing. Book NLP, specifically designed for literary texts, was chosen as it is well-suited for analyzing narrative structures like plots. We identified characters' genders through pronoun-based Gender Recognition and examined words associated with each character using dependency parsing.
+To address our third research question, we conducted a plot analysis using [the Book NLP library](https://github.com/booknlp/booknlp), performing Named Entity Recognition (NER), coreference resolution, and dependency parsing. Designed specifically for literary texts, Book NLP was chosen for its effectiveness in analyzing narrative structures. We identified characters' genders through pronoun-based Gender Recognition and analyzed words associated with each character using dependency parsing.
 
 Our analysis included:
 
-- Counting the number and mention frequency of female and male characters in the plot ("Mention Count by Gender"), and
-- Examining words associated with each gender in different roles, such as possessive words, agent words, patient words, and modifiers ("Word Cloud by Gender").
+- Counting the number and frequency of mentions of female and male characters in the plot ("Mention Count by Gender"), and
+- Examining words associated with each gender in various roles, such as possessive words, agents, patients, and modifiers ("Word Cloud by Gender").
 
-Moving beyond simple word associations, we extracted events related to agent and patient words, using the COMET model to infer potential character attributes (xAttribute) and emotions (xReact, oReact) based on these events. This allowed us to analyze variations in personas and emotional responses across genders.
+Expanding beyond basic word associations, we extracted events involving agent and patient roles and will use [the COMET model along with the Kogito library](https://github.com/epfl-nlp/kogito) to infer likely character attributes (xAttribute) and emotions (xReact, oReact) based on these events (TBD). This approach will allow us to explore variations in personas and emotional responses across genders.
+
+
 
 
 ### ML
