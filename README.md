@@ -20,20 +20,26 @@ In addition to these main questions, we may choose to explore other sub-question
 
 ## Supplementary Data
 
-In addition to the CMU dataset, we are using the Wikipedia pages that exist for a subset of the CMU dataset movies. With these Wikipedia pages, we will access the plot summaries and the movie's director. The plot summaries will be used to potentially supplement the smaller summaries in the CMU dataset. For our analysis, the plot summaries are being used extract information and sentiment about the different characters. We are accessing the directors because we want to study the gender imbalances in movie production jobs. We will study how this imbalance has changed with time. 
+In addition to the CMU dataset, we are using the Wikipedia pages that exist for a subset of the CMU dataset movies. With these Wikipedia pages, we will access the plot summaries. The plot summaries will potentially supplement the smaller summaries in the CMU dataset. For our analysis, the plot summaries are being used to extract information and sentiment about the different characters. To access the Wikipedia data, we are simply requesting webpages based on the 'wiki_movie_id' key in the CMU dataset from the Wikipedia API.  
 
-What IMBD dataset?
+We are also planning on using data from IMBD. We will access movies' scores and the directors. We want this data for two main reasons: to study the relationship between a lead role's gender and the respective movie's IMBD rating and to study the potential gender imbalances in movie production jobs. We will study how both of these have changed with time. To access this data, we plan to use the IMBD id which is commonly found in the Wikipedia pages. Since IMBD's API has licensing restrictions, it is not so straightforward to access the data. Instead we are going to use IMBD's provided non-commercial datasets.  
 
 ## Methods
 
 - ML: Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
 
-Task: That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook. 
+- Plot Analysis:
+![Plot Analysis Pipeline](plot_pipeline.png) 
+
+- Clustering of genre success (revenue) by gender
+
+Task: That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook.
 
 ## Project Timeline
 
 
-## Team Milestones for 
+## Team Milestones
+
 
 ---
 
