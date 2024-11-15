@@ -36,11 +36,10 @@ Our analysis included:
 
 Moving beyond simple word associations, we extracted events related to agent and patient words, using the COMET model to infer potential character attributes (xAttribute) and emotions (xReact, oReact) based on these events. This allowed us to analyze variations in personas and emotional responses across genders.
 
-- ML: Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
+### ML
+Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
 
-
-
-- Clustering of genre success (revenue) by gender
+### Clustering of genre success (revenue) by gender
 
 Task: That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook.
 
