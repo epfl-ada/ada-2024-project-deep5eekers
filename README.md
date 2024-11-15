@@ -24,9 +24,11 @@ In addition to these main questions, we may choose to explore other sub-question
 
 ## Supplementary Data
 
-In addition to the CMU dataset, we are using the Wikipedia pages that exist for a subset of the CMU dataset movies. With these Wikipedia pages, we have accessed the plot summaries. The plot summaries will potentially supplement the smaller summaries in the CMU dataset. For our analysis, the plot summaries are being used to extract information and sentiment about the different characters. To access the Wikipedia data, we are simply requesting webpages based on the 'wiki_movie_id' key in the CMU dataset from the Wikipedia API.  
+- Wikipedia: In addition to the CMU dataset, we are using the Wikipedia pages that exist for a subset of the CMU dataset movies. We are going to use this Wikipedia pages for several purposes: retrieve plot summary information (it might be richer than provided in CMU), get IMDb id for the movies, retrieve general information about people (gender, occupation). To access the Wikipedia data, we are processing the latest wikipedia dump, using 'wiki_movie_id' key in the CMU dataset to retrieve the specific pages.  
 
-We are also planning on using data from IMBD. We will access movies' scores and the directors. We want this data for two main reasons: to study the relationship between a lead role's gender and the respective movie's IMBD rating and to study the potential gender imbalances in movie production jobs. We will study how both of these have changed with time. To access this data, we used the IMBD id which is commonly found in the Wikipedia pages. Since IMBD's API has licensing restrictions, it is not so straightforward to access the data. Instead we are going to use IMBD's provided non-commercial datasets.  
+- IMDb: We are also planning on using data from IMDb. We will access movies' scores, number of votes and the information about the people: directors, writers. We want this data for two main reasons: to study the relationship between a lead role's gender and the respective movie's IMDb rating and to study the potential gender imbalances in movie production jobs. To access this data, we used the IMDb ID which is commonly found in the Wikipedia pages. Since IMDb's API has licensing restrictions, it is not so straightforward to access the data. Instead, we are going to use IMDb's provided non-commercial datasets.  
+
+- Oscar: We are planning to use data from the Oscar nomination to analyze gender inequality in the awards nomination. We will use public Oscar's search base and parse the provided html with award's history for our needs.  
 
 ## Methods
 
