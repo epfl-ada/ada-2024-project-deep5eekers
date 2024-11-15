@@ -22,7 +22,7 @@ In addition to these main questions, we may choose to explore other sub-question
 
 In addition to the CMU dataset, we are using the Wikipedia pages that exist for a subset of the CMU dataset movies. With these Wikipedia pages, we will access the plot summaries. The plot summaries will potentially supplement the smaller summaries in the CMU dataset. For our analysis, the plot summaries are being used to extract information and sentiment about the different characters. To access the Wikipedia data, we are simply requesting webpages based on the 'wiki_movie_id' key in the CMU dataset from the Wikipedia API.  
 
-We are also planning on using data from IMBD. We will access movies' IMBD scores and the directors. We want this data for two main reasons: to study the relationship between a lead role's gender and the respective movie's IMBD rating and to study the potential gender imbalances in movie production jobs. We will study how both of these have changed with time. To access this data, we plan to use the IMBD movie ID common in Wikipedia pages and the IMBD API.
+We are also planning on using data from IMBD or another movie rating database. We will access movies' scores and the directors. We want this data for two main reasons: to study the relationship between a lead role's gender and the respective movie's IMBD rating and to study the potential gender imbalances in movie production jobs. We will study how both of these have changed with time. To access this data, we plan to use the IMBDId, movie title, etc. Since IMBD has licensing restrictions, it is not so straightforward to access the data. There are multiple other databases we are exploring to access IMBD-related data. These won't result in licensing infringement and other such issues. A good example is the TMBD platform. With API requests, you can access the average score given by users and director information.
 
 ## Methods
 
@@ -33,7 +33,7 @@ Task: That you have a reasonable plan and ideas for methods you’re going to us
 ## Project Timeline
 
 
-## Team Milestones for 
+## Team Milestones
 
 ---
 
