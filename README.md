@@ -26,6 +26,8 @@ What IMBD dataset?
 
 ## Methods
 
+- ML: Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
+
 Task: That you have a reasonable plan and ideas for methods you’re going to use, giving their essential mathematical details in the notebook. 
 
 ## Project Timeline
