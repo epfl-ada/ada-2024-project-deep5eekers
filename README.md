@@ -31,8 +31,9 @@ For our plot analysis, we used the Book NLP library to perform Named Entity Reco
 
 Our analysis included:
 
-Counting the number and mention frequency of female and male characters in the plot ("Mention Count by Gender"), and
-Examining words associated with each gender in different roles, such as possessive words, agent words, patient words, and modifiers ("Word Cloud by Gender").
+- Counting the number and mention frequency of female and male characters in the plot ("Mention Count by Gender"), and
+- Examining words associated with each gender in different roles, such as possessive words, agent words, patient words, and modifiers ("Word Cloud by Gender").
+
 Moving beyond simple word associations, we extracted events related to agent and patient words, using the COMET model to infer potential character attributes (xAttribute) and emotions (xReact, oReact) based on these events. This allowed us to analyze variations in personas and emotional responses across genders.
 
 - ML: Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
