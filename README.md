@@ -28,7 +28,7 @@ We are also planning on using data from IMBD. We will access movies' scores and 
 ### Plot Analysis
 ![Plot Analysis Pipeline](plot_pipeline.png)
 
-For our plot analysis, we used the Book NLP library to perform Named Entity Recognition (NER), coreference resolution, and dependency parsing. Book NLP, specifically designed for literary texts, was chosen as it is well-suited for analyzing narrative structures like plots. We identified characters' genders through pronoun-based Gender Recognition and examined words associated with each character using dependency parsing.
+For our plot analysis, we used [the Book NLP library](https://github.com/booknlp/booknlp) to perform Named Entity Recognition (NER), coreference resolution, and dependency parsing. Book NLP, specifically designed for literary texts, was chosen as it is well-suited for analyzing narrative structures like plots. We identified characters' genders through pronoun-based Gender Recognition and examined words associated with each character using dependency parsing.
 
 Our analysis included:
 
@@ -36,6 +36,7 @@ Our analysis included:
 - Examining words associated with each gender in different roles, such as possessive words, agent words, patient words, and modifiers ("Word Cloud by Gender").
 
 Moving beyond simple word associations, we extracted events related to agent and patient words, using the COMET model to infer potential character attributes (xAttribute) and emotions (xReact, oReact) based on these events. This allowed us to analyze variations in personas and emotional responses across genders.
+
 
 ### ML
 Train a model to predict gender from metadata (e.g., role, genre, awards). Analyze feature importance to identify attributes strongly correlated with each gender.
