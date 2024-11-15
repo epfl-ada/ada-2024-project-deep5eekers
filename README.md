@@ -29,7 +29,16 @@ In addition to the CMU dataset, we are using the Wikipedia pages that exist for 
 We are also planning on using data from IMBD. We will access movies' scores and the directors. We want this data for two main reasons: to study the relationship between a lead role's gender and the respective movie's IMBD rating and to study the potential gender imbalances in movie production jobs. We will study how both of these have changed with time. To access this data, we used the IMBD id which is commonly found in the Wikipedia pages. Since IMBD's API has licensing restrictions, it is not so straightforward to access the data. Instead we are going to use IMBD's provided non-commercial datasets.  
 
 ## Methods
+
+### Part 1: Getting familiar with the data.
+The first step to starting off our analysis, was getting to know the data and the information we could gather based on that. 
+
+*Step 1:* We wrote utility functions in order to load the datasets in convenient formats.
+
+*Step 2:* Preliminary analysis was conducted to visualize the representation of male and female characters, across countries, years and grenres.
+
 ### Plot Analysis
+
 ![Plot Analysis Pipeline](plot_pipeline.png)
 
 For our plot analysis, we used [the Book NLP library](https://github.com/booknlp/booknlp) to perform Named Entity Recognition (NER), coreference resolution, and dependency parsing. Book NLP, specifically designed for literary texts, was chosen as it is well-suited for analyzing narrative structures like plots. We identified characters' genders through pronoun-based Gender Recognition and examined words associated with each character using dependency parsing.
