@@ -4,7 +4,7 @@ import re
 import tqdm
 
 from typing import Dict, List, Optional
-from utils import load_df_movies
+from utils.utils import load_df_movies
 
 """
 This file is dedicated to the Wikipedia Dump Parsing
