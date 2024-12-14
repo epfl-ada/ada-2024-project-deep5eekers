@@ -9,8 +9,28 @@ import requests
 import wikipediaapi
 import tqdm
 
-from utils.utils import load_df_summaries, load_df_movies
+from utils.utils import load_df_movies
 
+
+"""
+This file is dedicated to the adding IMBD rating to each movie, as well as parsing information about movie director's name and gender.
+
+We can join the information from wikipedia, which is previously computed by parse_wikipedia.py
+
+This way, for each wiki_id we have unique IMDB id
+
+After that, we download IMDB data from the official IMDB website: https://developer.imdb.com/non-commercial-datasets/
+
+- name.basics.tsv
+- title.crew.tsv
+- title.ratings.tsv
+
+Joining this together, we have our information about each movie's rating and director's name.
+
+However, there is still work to determine gender of each director, as it's not provided by IMDB or wikipedia.
+
+We use data from IMDB description and wikipedia page and heuristics for that. 
+"""
 
 def get_imdb_id(wiki_id, wiki_to_imdb):
     tt = wiki_to_imdb.get(str(wiki_id), None)
