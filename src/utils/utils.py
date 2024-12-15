@@ -93,6 +93,7 @@ def load_df_character_clusters(path):
             "actor": "actor_name",
         }
     )
+    df_clusters["cluster"] = df_clusters["cluster"].str.replace('_', ' ').str.capitalize()
     return df_clusters
 
 import requests
