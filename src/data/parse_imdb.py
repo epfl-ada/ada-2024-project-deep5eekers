@@ -151,7 +151,7 @@ def extract_person_description(entities: List) -> Dict:
 
 
 def main():
-    data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+    data_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
 
     file_path = os.path.join(data_dir, 'MovieSummaries')
 
