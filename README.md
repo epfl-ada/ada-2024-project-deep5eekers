@@ -48,7 +48,7 @@ Expanding beyond basic word associations, we extracted events involving agent an
 
 Our analysis included the following components:
 
-- **Mention Count by Gender**: Counting the number and frequency of mentions for female and male characters in the plot.
+- **Mention / Character Count by Gender**: Counting the number and frequency of mentions for female and male characters in the plot.
 - **Word Cloud by Gender**: Visualizing words associated with each gender across various roles, such as possessive words, agents, and patients.
 - **Attributes and Emotion Word Cloud by Gender**: Highlighting inferred character attributes and emotions based on event analysis.
 
