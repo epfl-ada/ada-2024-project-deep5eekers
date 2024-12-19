@@ -40,7 +40,7 @@ The first step to starting off our analysis, was getting to know the data and th
 
 
 ### Research Question 3: Plot Analysis
-![Plot Analysis Pipeline](./data/plot_pipeline.png)
+![Plot Analysis Pipeline](./data/plot_analysis_pipeline.png)
 
 To address our RQ3, we conducted a plot analysis using [the Book NLP library](https://github.com/booknlp/booknlp), performing Named Entity Recognition (NER), coreference resolution, and dependency parsing. Designed specifically for literary texts, Book NLP was chosen for its effectiveness in analyzing narrative structures. We identified characters' genders through pronoun-based Gender Recognition and analyzed words associated with each character using dependency parsing.
 
