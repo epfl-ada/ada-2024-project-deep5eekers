@@ -42,14 +42,15 @@ The first step to starting off our analysis, was getting to know the data and th
 ### Research Question 3: Plot Analysis
 ![Plot Analysis Pipeline](./data/plot_analysis_pipeline.png)
 
-To address our RQ3, we conducted a plot analysis using [the Book NLP library](https://github.com/booknlp/booknlp), performing Named Entity Recognition (NER), coreference resolution, and dependency parsing. Designed specifically for literary texts, Book NLP was chosen for its effectiveness in analyzing narrative structures. We identified characters' genders through pronoun-based Gender Recognition and analyzed words associated with each character using dependency parsing.
+To address RQ3, we conducted a plot analysis using [the Book NLP library](https://github.com/booknlp/booknlp), which provides capabilities such as Named Entity Recognition (NER), coreference resolution, and dependency parsing. Specifically designed for literary texts, Book NLP was selected for its effectiveness in analyzing narrative structures. We identified characters' genders through pronoun-based gender recognition and analyzed words associated with each character using dependency parsing.
 
-Our analysis included:
+Expanding beyond basic word associations, we extracted events involving agent and patient roles and employed [the COMET model along with the Kogito library](https://github.com/epfl-nlp/kogito) to infer likely character attributes (xAttribute) and emotions (xReact, oReact) from these events.
 
-- Counting the number and frequency of mentions of female and male characters in the plot ("Mention Count by Gender"), and
-- Examining words associated with each gender in various roles, such as possessive words, agents, patients, and modifiers ("Word Cloud by Gender").
+Our analysis included the following components:
 
-Expanding beyond basic word associations, we extracted events involving agent and patient roles and will use [the COMET model along with the Kogito library](https://github.com/epfl-nlp/kogito) to infer likely character attributes (xAttribute) and emotions (xReact, oReact) based on these events (TBD). This approach will allow us to explore variations in personas and emotional responses across genders.
+- **Mention Count by Gender**: Counting the number and frequency of mentions for female and male characters in the plot.
+- **Word Cloud by Gender**: Visualizing words associated with each gender across various roles, such as possessive words, agents, and patients.
+- **Attributes and Emotion Word Cloud by Gender**: Highlighting inferred character attributes and emotions based on event analysis.
 
 
 ### Research Question 4: Representation & Success
