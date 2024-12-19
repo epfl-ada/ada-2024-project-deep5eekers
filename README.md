@@ -1,4 +1,4 @@
-# Gender in the Film World
+# Exploring Gender Dynamics in Film
 
 ## Abstract
 
@@ -28,7 +28,7 @@ In addition to these main questions, we may choose to explore other sub-question
 
 ## Methods
 
-### Part 1: Exploring and Expanding the Data (Done in P2)
+### Research Question 1: Gender Imbalances
 The first step to starting off our analysis, was getting to know the data and the information we could gather based on that. 
 
 - We wrote utility functions in order to load the datasets in convenient formats.
@@ -36,7 +36,10 @@ The first step to starting off our analysis, was getting to know the data and th
 - We have used the clustering provided by the CMU datasets. Analysis of frequency of different personality traits by gender was performed. (RQ2)
 - We have enriched our data with additional datasets, scrapping information from wikipedia, getting familiar with IMDb and Oscar datasets. Those datasets are merged using Wikipedia to IMDb id mapping. We still have to enrich the data, as currently no gender labels for production roles and Oscar dataset are present.  
 
-### Part 2: Plot Analysis (Done in P2)
+### Research Question 2: Gender Stereotypes
+
+
+### Research Question 3: Plot Analysis
 ![Plot Analysis Pipeline](./data/plot_pipeline.png)
 
 To address our RQ3, we conducted a plot analysis using [the Book NLP library](https://github.com/booknlp/booknlp), performing Named Entity Recognition (NER), coreference resolution, and dependency parsing. Designed specifically for literary texts, Book NLP was chosen for its effectiveness in analyzing narrative structures. We identified characters' genders through pronoun-based Gender Recognition and analyzed words associated with each character using dependency parsing.
@@ -49,12 +52,9 @@ Our analysis included:
 Expanding beyond basic word associations, we extracted events involving agent and patient roles and will use [the COMET model along with the Kogito library](https://github.com/epfl-nlp/kogito) to infer likely character attributes (xAttribute) and emotions (xReact, oReact) based on these events (TBD). This approach will allow us to explore variations in personas and emotional responses across genders.
 
 
-### Part 3: In-depth analysis (Plans for P3)
+### Research Question 4: Representation & Success
 
-- (RQ1) and (RQ2) require more statistical analysis. While initial visualization was performed, we have to be mathematically precise here. 
-- (RQ3) Plot Analysis was researched to significant extent. However, we still need perform the analysis on the scale as well as test additional hypothesis (adjective analysis, enriching summaries with wikipedia information).
-- (RQ5) We have gathered additional data for the production roles analysis. We will calculate the proportion of male vs. female representation across different roles. As well as correlation of characters genders and directors of the movie. Analyze how this representation has changed over the past years. We are also interested whether gender of the director affects gender stereotypes and complexity of the roles (for example, whether female director provide more complex roles for women characters).     
-- (RQ4) Analyze if films with female leads perform differently in terms of revenue compared to male-led films. How this affects IMDb rating? How this affects the Oscar award?  
+### Research Question 5: Behind The Scenes 
 
 ## Project Timeline
 
