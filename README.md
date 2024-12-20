@@ -10,7 +10,7 @@ We were inspired to choose this topic because gender representation in film prov
 
 ## Research Questions
 
-In this section we have listed the main research questions we would like to address during this project. 
+In this section we have listed the main research questions we tried to answer during this project. 
 
 - RQ1: What gender imbalances exist in acting roles, and how do these differences vary over time, across genres, and between countries?
 - RQ2: What stereotypical character types are associated with each gender?
@@ -18,28 +18,17 @@ In this section we have listed the main research questions we would like to addr
 - RQ4: Is unequal gender representation in films linked to a movie’s success or failure? Are Oscar nominations balanced across genders?
 - RQ5: Does gender inequality exist in production roles as well? Does a director's gender influence the portrayal of male and female characters in films?
 
-In addition to these main questions, we may choose to explore other sub-questions. As we have gone through the dataset in our initial analysis, we have stumbled upon other interesting gender-related topics. For example, we may look into how movie ratings differ for movies with female leads versus male leads. 
-
 ## Supplementary Data
 
-- Wikipedia: In addition to the CMU dataset, we are using the Wikipedia pages that exist for a subset of the CMU dataset movies. We are going to use this Wikipedia pages for several purposes: retrieve plot summary information (it might be richer than provided in CMU), get IMDb id for the movies, retrieve general information about people (gender, occupation). To access the Wikipedia data, we are processing the latest wikipedia dump, using 'wiki_movie_id' key in the CMU dataset to retrieve the specific pages.  
+- Wikipedia: In addition to the CMU dataset, we have utilized the Wikipedia pages corresponding to a subset of the CMU dataset movies. These pages were processed to retrieve plot summary information (often richer than the summaries provided in the CMU dataset), IMDb IDs for the movies, and general information about people, such as gender and occupation. To access this data, we processed the latest Wikipedia dump, leveraging the wiki_movie_id key from the CMU dataset to identify and extract the relevant pages.
 
-- IMDb: We are also planning on using data from IMDb. We will access movies' scores, number of votes and the information about the people: directors, writers. We want this data for two main reasons: to study the relationship between a lead role's gender and the respective movie's IMDb rating and to study the potential gender imbalances in movie production jobs. To access this data, we used the IMDb ID which is commonly found in the Wikipedia pages. Since IMDb's API has licensing restrictions, it is not so straightforward to access the data. Instead, we are going to use IMDb's provided non-commercial datasets.  
+- IMDb: We have extracted data from IMDb, focusing on movies' scores, number of votes, and information about people involved in production, such as directors and writers. This data helped us analyzing potential gender imbalances in movie production jobs. Using the IMDb ID obtained from the Wikipedia pages, we accessed IMDb's provided non-commercial datasets, as the official IMDb API has licensing restrictions.
 
-- Oscar: We are planning to use data from the Oscar nomination to analyze gender inequality in the awards nomination. We will use public Oscar's search base and parse the provided html with award's history for our needs.  
+- Oscar: To analyze gender inequality in Oscar nominations, we crawled data from the public Oscar awards search base. By parsing the provided HTML containing awards history, we extracted information necessary for our analysis, including nomination categories, nominees' names, and genders. This dataset allows us to explore disparities in representation among nominees across different categories.
 
 ## Methods
 
 ### Research Question 1: Gender Imbalances
-The first step to starting off our analysis, was getting to know the data and the information we could gather based on that. 
-
-- We wrote utility functions in order to load the datasets in convenient formats.
-- Preliminary analysis was conducted to visualize the representation of male and female characters, across countries, years and genres. (RQ1) 
-- We have used the clustering provided by the CMU datasets. Analysis of frequency of different personality traits by gender was performed. (RQ2)
-- We have enriched our data with additional datasets, scrapping information from wikipedia, getting familiar with IMDb and Oscar datasets. Those datasets are merged using Wikipedia to IMDb id mapping. We still have to enrich the data, as currently no gender labels for production roles and Oscar dataset are present. 
-
-^ simon: old info i think, below is what i write
-
 To address RQ1, we decided to split our analysis of gender imbalances into three sections:
 - Time
 - Geography
@@ -55,7 +44,7 @@ We expanded our search of the ratio of male actors by year to each continent. We
 We looked at the top genres by total cast data, then calculated the ratio of female cast members by genre. This data helped show what genres women were more represented in. 
 
 ### Research Question 2: Gender Stereotypes
-To address RQ2, we investigated potential stereotypes with the characters of each gender, by clustering the TV tropes data by character type and gender. This gave us information about the common character types played by each gender. 
+To address RQ2, we investigated potential stereotypes with the characters of each gender, by clustering the TV tropes data by character type and gender. This gave us information about the common character types played by each gender and gave us some initial insights into bias around genders in film.
 
 ### Research Question 3: Plot Analysis
 ![Plot Analysis Pipeline](./data/plot_analysis_pipeline.png)
@@ -72,35 +61,21 @@ Our analysis included the following components:
 
 
 ### Research Question 4: Representation & Success
-To address RQ4, we investigated how gender relates to success in box office revenue and Oscar nominations. We did this by calculating the female cast ratio for each movie that had box office revenue data and visualizing that data. For the second part of the question, we used the Oscar dataset to compare nomination categories by gender balance.
+To address RQ4, we explored how gender relates to success in both box office revenue and Oscar nominations. For the first part of the question, we calculated the female cast ratio for each movie that had box office revenue data and visualized the distribution to examine potential patterns. This analysis allowed us to investigate whether movies with a higher proportion of female representation in their casts tend to achieve comparable commercial success.
+
+For the second part, we utilized an Oscar dataset that we crawled, capturing a comprehensive history of nominations and winners across categories. Our findings revealed a significant disparity: female nominees are vastly underrepresented compared to their male counterparts across most categories. This imbalance is particularly striking in fields like directing and screenplay writing, where female representation remains minimal. Even in categories traditionally considered more inclusive, such as acting awards, the proportion of female nominees still lags behind men in terms of overall recognition.
 
 ### Research Question 5: Behind The Scenes 
-To address RQ5, we used IMDB data to find director names from the top 10,000 rated movies and scrapped their gender from text counting mentions of pronouns (e.g. he, her, him, his, hers). Using the movies and the respective gender of the directors, we were able to get distributions of revenue, ratings, and votes for each director's gender.
-## Project Timeline
+To address RQ5, we examined how a director’s gender influences key movie success metrics such as revenue, ratings, and votes. Using IMDB data, we identified director names from the top 10,000 highest-rated movies and employed a scraping approach to infer their gender by analyzing text for mentions of gendered pronouns (e.g., he, her, him, his, hers). This method allowed us to approximate gender representation among directors in a systematic way.
 
+By pairing the inferred gender with the respective movies, we analyzed and visualized distributions of box office revenue, user ratings, and audience vote counts across male and female directors. Our findings revealed stark disparities: male directors overwhelmingly dominate the data, with significantly higher representation in all categories. Additionally, while movies directed by women often achieve comparable or even superior ratings, their frequency is far lower, and their revenue distributions suggest a systemic bias in resource allocation or marketing opportunities.
 
-### Week 1: Finalize P2 achievements
-- Merge CMU, IMDb and Oscar data (Enrich collected data with Gender data for Actors, Directors, etc. using Wikipedia)
-- More work on RQ1, RQ2, additional hypothesis testing
-- In depth work on RQ3
-### Week 2: Homework  
-- Start working on RQ5
-- ADA Homework 2 =) 
-### Week 3: Oscar and Revenue
-- Work on RQ4, evaluating box office and gender associations
-- Analyze Oscar data, enhance analysis of the (RQ5) with more production roles from the Oscar data. 
-### Week 4: Data Visualization
-- Start working on the website
-- Work on detailed/rich visualizations (matplotlib plots --> JS plots)
-### Week 5: Final Presentation
-- Write a story, project presentation
-- Clean up visualization
-
+This analysis highlights the underrepresentation of female directors in the film industry and raises important questions about how gender dynamics shape both the opportunities available to directors and the audience reception of their work.
 
 ### Deep5eekers Team
 
-- Simon Anton (WebDevelopment expert)
-- Kyuhee Kim (Plot Analysis expert, RQ3)
-- Christina Kopidaki (Visualization expert, RQ1, RQ2)
-- Margarita Mikhelson (Statistician, Hypothesis testing)
-- Ivan Pavlov (Data Engineer, Enriching the data)
+- [Simon Anton](mailto:simon.anton@epfl.ch)
+- [Kyuhee Kim](mailto:kyuhee.kim@epfl.ch)
+- [Christina Kopidaki](mailto:christina.kopidaki@epfl.ch)
+- [Margarita Mikhelson](mailto:margarita.mikhelson@epfl.ch)
+- [Ivan Pavlov](mailto:ivan.pavlov@epfl.ch)
