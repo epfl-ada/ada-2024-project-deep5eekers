@@ -1,5 +1,7 @@
 # Exploring Gender Dynamics in Film
 
+Our datastory is available in the following link: https://pavlov200912.github.io/ada-deep5eekers/
+
 ## Abstract
 
 In this project we will explore the role of gender in the film industry. We have decided to investigate a variety of ideas and themes around gender. We will consider questions about gender in roles, directors, character portrayals, and general sentiment. 
