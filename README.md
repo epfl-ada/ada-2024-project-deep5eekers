@@ -74,8 +74,15 @@ This analysis highlights the underrepresentation of female directors in the film
 
 ### Deep5eekers Team
 
-- [Simon Anton](mailto:simon.anton@epfl.ch)
-- [Kyuhee Kim](mailto:kyuhee.kim@epfl.ch)
-- [Christina Kopidaki](mailto:christina.kopidaki@epfl.ch)
-- [Margarita Mikhelson](mailto:margarita.mikhelson@epfl.ch)
-- [Ivan Pavlov](mailto:ivan.pavlov@epfl.ch)
+- [Simon Anton](mailto:simon.anton@epfl.ch) (WebDevelopment and Visualization expert, StoryTeller)
+- [Kyuhee Kim](mailto:kyuhee.kim@epfl.ch) (Plot Analysis expert, RQ3)
+- [Christina Kopidaki](mailto:christina.kopidaki@epfl.ch) (WebDevelopment and Visualization expert, RQ1, RQ2)
+- [Margarita Mikhelson](mailto:margarita.mikhelson@epfl.ch) (Statistician, Hypothesis testing, Used data extracted by plot analysis and turned them to meaningful results)
+- [Ivan Pavlov](mailto:ivan.pavlov@epfl.ch) (Data Engineer, Enriching the data and using them to answer RQ4, RQ5)
+
+
+- Simon Anton (WebDevelopment expert)
+- Kyuhee Kim (Plot Analysis expert, RQ3)
+- Christina Kopidaki (Visualization expert, RQ1, RQ2)
+- Margarita Mikhelson (Statistician, Hypothesis testing)
+- Ivan Pavlov (Data Engineer, Enriching the data)
